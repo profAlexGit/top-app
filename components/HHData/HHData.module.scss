@@ -1,0 +1,77 @@
+.hh {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+    text-align: center;
+
+    .title {
+        font-weight: 300;
+        font-size: 20px;
+        color: $black;
+    }
+
+    .rate {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, auto);
+        justify-content: center;
+
+        .filled {
+            circle {
+                fill: #FC836D
+            }
+        }
+    }
+
+    .total,
+    .salary {
+        padding: 20px 0;
+    }
+
+    .total {
+        .value {
+            font-weight: bold;
+            font-size: 36px;
+            color: $primary
+        }
+    }
+
+    .salary {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 0;
+
+        &_item {
+            display: grid;
+            gap: 10px;
+            // justify-content: center;
+
+            &:not(:last-child) {
+                border-right: 1px solid $gray-light;
+            }
+
+            .value {
+                font-weight: bold;
+                font-size: 26px;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 640px) {
+        .salary {
+            grid-template-columns: 1fr;
+
+            &_item {
+                &:not(:last-child) {
+                    padding-bottom: 20px;
+                    border-right: none;
+                    border-bottom: 1px solid $gray-light;
+                }
+            }
+        }
+    }
+}

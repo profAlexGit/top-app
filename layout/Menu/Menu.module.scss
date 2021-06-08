@@ -1,0 +1,69 @@
+.menu {
+    color: $gray-menu;
+
+    .firstLevelMenu {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        gap: 20px;
+        align-items: center;
+
+        font-size: 18px;
+
+        svg {
+            fill: $gray-menu
+        }
+
+        &:hover,
+        &.active {
+            color: $primary;
+
+            svg {
+                fill: $primary;
+            }
+        }
+    }
+
+    .secondBlock {
+        margin: 15px 12px 20px 0;
+        padding-left: 32px;
+        padding: 10px 0 10px 32px;
+
+        border-left: 1px solid #DFDFDF;
+
+        .secondLevelMenu {
+            margin-bottom: 10px;
+            font-weight: 300;
+            font-size: 12px;
+            text-transform: uppercase;
+
+            cursor: pointer;
+        }
+
+        .secondLevelBlock {
+            display: none;
+
+            &.opened {
+                display: block;
+
+                &:last-child {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .thirdLevelMenu {
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        display: block;
+
+        &:hover,
+        &.active {
+            color: $primary;
+        }
+    }
+}

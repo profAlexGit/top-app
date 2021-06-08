@@ -1,0 +1,24 @@
+.sort {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 28px;
+
+    .sortIcon {
+        visibility: hidden;
+        margin-right: 8px;
+    }
+
+    .active {
+        color: $primary;
+        font-weight: bold;
+
+        .sortIcon {
+            visibility: visible;
+        }
+    }
+
+    &>span {
+        cursor: pointer;
+    }
+
+}
